@@ -1911,7 +1911,7 @@ sigchld(int unused)
 	while (0 < waitpid(-1, NULL, WNOHANG));
 }
 
-void
+/* void
 spawn(const Arg *arg)
 {
 	if (arg->v == dmenucmd)
@@ -1925,7 +1925,7 @@ spawn(const Arg *arg)
 		perror(" failed");
 		exit(EXIT_SUCCESS);
 	}
-}
+} */
 
 void
 spawnbar()
