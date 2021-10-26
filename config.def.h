@@ -43,14 +43,14 @@ static const Rule rules[] = {
 	 */
 	/* class                  instance    title                  tags mask   isfloating   monitor */
 	{ "firefox",              NULL,       NULL,                     1,          0,        -1 },
-    { "firefox",              NULL,      "Picture-in-Picture",     ~0,          1,        -1 },
+        { "firefox",              NULL,      "Picture-in-Picture",     ~0,          1,        -1 },
 	{ "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
 	{ "Steam",                NULL,       NULL,                   1 << 8,       0,        -1 },
-    { "Steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
-    { "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
-    { "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
+        { "Steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
+        { "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
+        { "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
 };
 
 /* layout(s) */
@@ -85,13 +85,15 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+        { MODKEY,                       XK_m,      incnmaster,     {.i = +1 } },
+        { MODKEY|ShiftMask,             XK_m,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_y,      setlayout,      {0} }, // switch between two recent layouts
-	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
+	{ MODKEY,                       XK_f,      togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -117,7 +119,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+//      { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },

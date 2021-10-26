@@ -5,3 +5,4 @@ config.h
 *.rej
 *.diff
 *.pkg.tar.zst
+dwm-msg
