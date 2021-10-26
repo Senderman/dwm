@@ -43,14 +43,14 @@ static const Rule rules[] = {
 	 */
 	/* class                  instance    title                  tags mask   isfloating   monitor */
 	{ "firefox",              NULL,       NULL,                     1,          0,        -1 },
-        { "firefox",              NULL,      "Picture-in-Picture",     ~0,          1,        -1 },
+	{ "firefox",              NULL,      "Picture-in-Picture",     ~0,          1,        -1 },
 	{ "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
 	{ "Steam",                NULL,       NULL,                   1 << 8,       0,        -1 },
-        { "Steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
-        { "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
-        { "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
+	{ "Steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
+	{ "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
+	{ "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
 };
 
 /* layout(s) */
@@ -82,11 +82,11 @@ static const Layout layouts[] = {
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-        { MODKEY,                       XK_m,      incnmaster,     {.i = +1 } },
-        { MODKEY|ShiftMask,             XK_m,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_m,      incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_m,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
