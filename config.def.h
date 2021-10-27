@@ -63,10 +63,10 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #include "grid.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[D]",      dwindle }, // dwindle layout from fibonacci patch
-	{ "[F]",      NULL },    // floating 
-	{ "[M]",      monocle },
-	{ "[G]",      grid },
+	{ "[󰣇]",      dwindle }, // dwindle layout from fibonacci patch
+	{ "[󱂬]",      NULL },    // floating 
+	{ "[󰝦]",      monocle },
+	{ "[󰝘]",      grid },
 };
 
 /* key definitions */
