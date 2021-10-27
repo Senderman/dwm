@@ -28,7 +28,7 @@ static const char *tags[] = {
 	"󰈹", // web
 	"󰵅", // social
 	"󰞷", // red-eye (terminal and other linux stuff)
-	"󰬷", // programming
+	"󰌠", // programming
 	"󰊗", // videogames
 	"󰅆", // job (work, but w is for web)
 	"󰖳", // kvm, virtual screens
