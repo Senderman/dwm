@@ -25,15 +25,15 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = {
-	"w", // web
-	"s", // social
-	"r", // red-eye (terminal and other linux stuff)
-	"p", // programming
-	"v", // videogames
-	"j", // job (work, but w is for web)
-	"k", // kvm, virtual screens
-	"o", // other
-	"b"  // background apps
+	"󰈹", // web
+	"󰵅", // social
+	"󰞷", // red-eye (terminal and other linux stuff)
+	"󰬷", // programming
+	"󰊗", // videogames
+	"󰅆", // job (work, but w is for web)
+	"󰖳", // kvm, virtual screens
+	"󱅃", // other
+	"󰜡",  // background apps
 };
 
 static const Rule rules[] = {
