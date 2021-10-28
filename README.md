@@ -28,7 +28,7 @@ In order to build dwm you need the Xlib header files.
 
 This dwm build uses [polybar-dwm-module](https://github.com/mihirlad55/polybar-dwm-module).
 
-Check out my [dotfiles](https://github.com/Senderman/dotfiles/tree/master/polybar/.config/polybar) repo to see how to configure dwm
+Check out my [dotfiles](https://github.com/Senderman/dotfiles/tree/master/polybar/.config/polybar) repo to see how to configure polybar
 
 
 ### Installation
