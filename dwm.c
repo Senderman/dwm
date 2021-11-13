@@ -2486,7 +2486,7 @@ notifywhenready(void)
 {
     if (!notifyfd)
         return;
-    write(notifyfd, '\n', 1);
+    write(notifyfd, "\n", 1);
     close (notifyfd);
 }
 
