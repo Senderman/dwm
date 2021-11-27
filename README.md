@@ -11,6 +11,7 @@ In order to build dwm you need the Xlib header files.
 * Changed hotkeys
 * "make clean" command deletes config.h
 * Changed color scheme
+* Support for [readiness notification](https://skarnet.org/software/s6/notifywhenup.html)
 
 ### Patches
 
