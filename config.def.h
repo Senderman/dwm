@@ -28,13 +28,13 @@ static const char *colors[][3]      = {
 static const char *tags[] = {
 	"󰈹", // web
 	"󰵅", // social
-	"󰞷", // red-eye (terminal and other linux stuff)
+	"󰞷", // terminal and other linux stuff
 	"󰌠", // programming
 	"󰊗", // videogames
-	"󰅆", // job (work, but w is for web)
+	"󰅆", // job
 	"󰖳", // kvm, virtual screens
 	"󱅃", // other
-	"󰜡",  // background apps
+	"󰜡", // background apps
 };
 
 static const Rule rules[] = {
@@ -52,6 +52,7 @@ static const Rule rules[] = {
 	{ "Steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
 	{ "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
 	{ "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
+    { "obs",                  NULL,       NULL,                   1 << 7,       0,        -1 },
 };
 
 /* layout(s) */
