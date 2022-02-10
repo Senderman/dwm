@@ -44,7 +44,8 @@ static const Rule rules[] = {
 	 */
 	/* class                  instance    title                  tags mask   isfloating   monitor */
 	{ "firefox",              NULL,       NULL,                     1,          0,        -1 },
-	{ "firefox",              NULL,      "Picture-in-Picture",     ~0,          1,        -1 },
+	{ "firefox",              NULL,       "Picture-in-Picture",    ~0,          1,        -1 },
+        { "mpv",                  NULL,       NULL,                    ~0,          1,        -1 },
 	{ "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
@@ -52,7 +53,7 @@ static const Rule rules[] = {
 	{ "Steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
 	{ "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
 	{ "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
-    { "obs",                  NULL,       NULL,                   1 << 7,       0,        -1 },
+        { "obs",                  NULL,       NULL,                   1 << 7,       0,        -1 },
 };
 
 /* layout(s) */
@@ -121,7 +122,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-//      { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+     // { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
