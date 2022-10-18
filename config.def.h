@@ -27,7 +27,7 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = {
 	"󰈹", // web
-	"󰵅", // social
+	"󰍡", // social
 	"󰞷", // terminal and other linux stuff
 	"󰌠", // programming
 	"󰊗", // videogames
