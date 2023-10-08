@@ -44,7 +44,7 @@ static const Rule rules[] = {
 	 */
 	/* class                  instance    title                  tags mask   isfloating   monitor */
 	{ "firefox",              "Navigator",NULL,                     1,          0,        -1 },
-	{ "firefox",              "Toolkit",  NULL,                    ~0,          1,        -1 },
+	{ NULL,                   "Toolkit",  "Picture-in-Picture",    ~0,          1,        -1 },
   { "mpv",                  NULL,       NULL,                    ~0,          1,        -1 },
 	{ "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
