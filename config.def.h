@@ -43,17 +43,18 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                  instance    title                  tags mask   isfloating   monitor */
-	{ "firefox",              NULL,       NULL,                     1,          0,        -1 },
-	{ "firefox",              NULL,       "Picture-in-Picture",    ~0,          1,        -1 },
-        { "mpv",                  NULL,       NULL,                    ~0,          1,        -1 },
+	{ "firefox",              "Navigator",NULL,                     1,          0,        -1 },
+	{ "firefox",              "Toolkit",  "Picture-in-Picture",    ~0,          1,        -1 },
+  { "mpv",                  NULL,       NULL,                    ~0,          1,        -1 },
 	{ "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
-	{ "Steam",                NULL,       NULL,                   1 << 8,       0,        -1 },
-	{ "Steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
+	{ "steam",                NULL,       NULL,                   1 << 8,       0,        -1 },
+	{ "steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
+	{ "steam",                NULL,       "Special Offers",       1 << 8,       1,        -1 },
 	{ "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
 	{ "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
-        { "obs",                  NULL,       NULL,                   1 << 7,       0,        -1 },
+  { "obs",                  NULL,       NULL,                   1 << 7,       0,        -1 },
 };
 
 /* layout(s) */
