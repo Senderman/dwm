@@ -53,4 +53,4 @@ uninstall:
 		${DESTDIR}${MANPREFIX}/man1/dwm.1\
 		${DESTDIR}${PREFIX}/bin/dwm-msg
 
-.PHONY: all options clean dist install uninstall
+.PHONY: all clean dist install uninstall
