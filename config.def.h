@@ -54,6 +54,7 @@ static const Rule rules[] = {
 	{ "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
 	{ "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
   { "obs",                  NULL,       NULL,                   1 << 7,       0,        -1 },
+  { "zenity",               NULL,       NULL,                     0,          1,        -1 }
 };
 
 /* layout(s) */

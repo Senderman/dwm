@@ -3,7 +3,7 @@
 pkgname=dwm-senderman-edition-git
 _pkgname=dwm
 pkgver=6.4
-pkgrel=1
+pkgrel=2
 pkgdesc="A dynamic window manager for X, patched by Senderman"
 url="https://github.com/Senderman/dwm"
 arch=('i686' 'x86_64')
