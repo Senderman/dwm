@@ -3,13 +3,13 @@
 pkgname=dwm-senderman-edition-git
 _pkgname=dwm
 pkgver=6.4
-pkgrel=3
+pkgrel=4
 pkgdesc="A dynamic window manager for X, patched by Senderman"
 url="https://github.com/Senderman/dwm"
 arch=('i686' 'x86_64')
 license=('MIT')
 options=(zipman)
-depends=('libx11' 'libxinerama' 'libxft' 'polybar' 'ttf-material-design-icons-webfont')
+depends=('libx11' 'libxinerama' 'libxft' 'polybar' 'ttf-material-design-icons-webfont' 'yajl')
 makedepends=('git')
 provides=('dwm')
 conflicts=('dwm')
