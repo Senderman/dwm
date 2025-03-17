@@ -48,7 +48,6 @@ static const Rule rules[] = {
 	{ "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
 	{ "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
-	{ "steam",                NULL,       NULL,                   1 << 8,       0,        -1 },
 	{ "steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
 	{ "steam",                NULL,       "Special Offers",       1 << 8,       1,        -1 },
 	{ "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
