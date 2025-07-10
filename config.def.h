@@ -18,41 +18,41 @@ static const char col_bar[]         = "#382db0";
 static const char col_border[]      = "#9b93ff";
 
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2   },
-	[SchemeSel]  = { col_gray4, col_bar,   col_border  },
+  /*               fg         bg         border   */
+  [SchemeNorm] = { col_gray3, col_gray1, col_gray2   },
+  [SchemeSel]  = { col_gray4, col_bar,   col_border  },
 };
 
 /* tagging */
 static const char *tags[] = {
-	"󰈹", // web
-	"󰍡", // social
-	"󰞷", // terminal and other linux stuff
-	"󰌠", // programming
-	"󰊗", // videogames
-	"󰅆", // job
-	"󰖳", // kvm, virtual screens
-	"󱅃", // other
-	"󰜡", // background apps
+  "󰈹", // web
+  "󰍡", // social
+  "󰞷", // terminal and other linux stuff
+  "󰌠", // programming
+  "󰊗", // videogames
+  "󰅆", // job
+  "󰖳", // kvm, virtual screens
+  "󱅃", // other
+  "󰜡", // background apps
 };
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
-	/* class                  instance    title                  tags mask   isfloating   monitor */
-	{ "firefox",              "Navigator",NULL,                     1,          0,        -1 },
-	{ NULL,                   "Toolkit",  "Picture-in-Picture",    ~0,          1,        -1 },
-  { "mpv",                  NULL,       NULL,                    ~0,          1,        -1 },
-	{ "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
-	{ "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
-	{ "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
-	{ "steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
-	{ "steam",                NULL,       "Special Offers",       1 << 8,       1,        -1 },
-	{ "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
-	{ "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
-  { "obs",                  NULL,       NULL,                   1 << 7,       0,        -1 },
+  /* xprop(1):
+   *	WM_CLASS(STRING) = instance, class
+   *	WM_NAME(STRING) = title
+   */
+  /* class                  instance    title                  tags mask   isfloating   monitor */
+  { "firefox",              "Navigator",NULL,                     1,          0,        -1 },
+  { NULL,                   "Toolkit",  "Picture-in-Picture",    ~0,          1,        -1 },
+  { "mpv",                  NULL,       NULL,                     0,          1,        -1 },
+  { "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
+  { "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
+  { "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
+  { "steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
+  { "steam",                NULL,       "Special Offers",       1 << 8,       1,        -1 },
+  { "jetbrains-idea-ce",    NULL,       NULL,                   1 << 3,       0,        -1 },
+  { "jetbrains-pycharm-ce", NULL,       NULL,                   1 << 3,       0,        -1 },
+  { "obs",                  NULL,       "OBS",                  1 << 7,       0,        -1 },
   { "zenity",               NULL,       NULL,                     0,          1,        -1 }
 };
 
@@ -65,70 +65,70 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #include "dwindle.c"
 #include "grid.c"
 static const Layout layouts[] = {
-	/* symbol     arrange function */
-	{ "[󰣇]",      dwindle }, // dwindle layout from fibonacci patch
-	{ "[󱂬]",      NULL },    // floating 
-	{ "[󰝦]",      monocle },
-	{ "[󰝘]",      grid },
+  /* symbol     arrange function */
+  { "[󰣇]",      dwindle }, // dwindle layout from fibonacci patch
+  { "[󱂬]",      NULL },    // floating 
+  { "[󰝦]",      monocle },
+  { "[󰝘]",      grid },
 };
 
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+  { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+  { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+  { MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
+  { MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
 static const Key keys[] = {
-	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_m,      incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_m,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_y,      setlayout,      {0} }, // switch between two recent layouts
-	{ MODKEY,                       XK_f,      togglefloating, {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_h,      layoutscroll,   {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_l,      layoutscroll,   {.i = +1 } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+  /* modifier                     key        function        argument */
+  { MODKEY,                       XK_b,      togglebar,      {0} },
+  { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+  { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+  { MODKEY,                       XK_m,      incnmaster,     {.i = +1 } },
+  { MODKEY|ShiftMask,             XK_m,      incnmaster,     {.i = -1 } },
+  { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+  { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+  { MODKEY,                       XK_Return, zoom,           {0} },
+  { MODKEY,                       XK_Tab,    view,           {0} },
+  { MODKEY,                       XK_q,      killclient,     {0} },
+  { MODKEY,                       XK_y,      setlayout,      {0} }, // switch between two recent layouts
+  { MODKEY,                       XK_f,      togglefloating, {0} },
+  { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+  { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+  { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
+  { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+  { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+  { MODKEY|ShiftMask,             XK_h,      layoutscroll,   {.i = -1 } },
+  { MODKEY|ShiftMask,             XK_l,      layoutscroll,   {.i = +1 } },
+  TAGKEYS(                        XK_1,                      0)
+  TAGKEYS(                        XK_2,                      1)
+  TAGKEYS(                        XK_3,                      2)
+  TAGKEYS(                        XK_4,                      3)
+  TAGKEYS(                        XK_5,                      4)
+  TAGKEYS(                        XK_6,                      5)
+  TAGKEYS(                        XK_7,                      6)
+  TAGKEYS(                        XK_8,                      7)
+  TAGKEYS(                        XK_9,                      8)
+  { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
-	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
+  /* click                event mask      button          function        argument */
+  { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
      // { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY|ShiftMask, Button1,      resizemouse,    {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+  { ClkWinTitle,          0,              Button2,        zoom,           {0} },
+  { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
+  { ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
+  { ClkClientWin,         MODKEY|ShiftMask, Button1,      resizemouse,    {0} },
+  { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+  { ClkTagBar,            0,              Button1,        view,           {0} },
+  { ClkTagBar,            0,              Button3,        toggleview,     {0} },
+  { ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+  { ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 
 static const char *ipcsockpath = "/tmp/dwm.sock";
