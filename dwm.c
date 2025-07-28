@@ -1722,7 +1722,7 @@ layoutscroll(const Arg *arg)
 	int switchto = selmon->ltcur + arg->i;
 	int l = LENGTH(layouts);
 
-	if (switchto == l)
+	if (switchto >= l)
 		switchto = 0;
 	else if(switchto < 0)
 		switchto = l - 1;
