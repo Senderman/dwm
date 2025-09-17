@@ -2,7 +2,7 @@
 
 pkgname=dwm-senderman-edition-git
 pkgver=6.4
-pkgrel=7
+pkgrel=8
 pkgdesc="A dynamic window manager for X, patched by Senderman"
 url="https://github.com/Senderman/dwm"
 arch=('i686' 'x86_64')
@@ -36,7 +36,7 @@ source=(
   yajl_dumps.c
   yajl_dumps.h
 )
-sha256sums=('b95ba76386aad8638549f7b67fe88599ef011b3dee282edcc34299676c1b6fe4'
+sha256sums=('44a6ed5feb17a4f83c4f717698c6e43d26bba4852fd5aaa06c7e794f9f9abea6'
             '330f2c23ddd59b9827c79951d9e03732b0b8fc16c2d20362101ea88bb0d015e5'
             '8efce2f953bf82de30c975a2ddbd13d54fdf00aedbd4572bf9292cd2f64e9b93'
             'b4a6864eb2c2e3f320bd4d2ac37a9bb53435911e115a17f7a2a3b698a9dbd228'
