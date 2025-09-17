@@ -42,11 +42,11 @@ static const Rule rules[] = {
    *	WM_NAME(STRING) = title
    */
   /* class                  instance    title                  tags mask   isfloating   monitor */
-  { "firefox",              "Navigator",NULL,                     1,          0,        -1 },
+//  { "firefox",              "Navigator",NULL,                     1,          0,        -1 },
   { NULL,                   "Toolkit",  "Picture-in-Picture",    ~0,          1,        -1 },
   { "mpv",                  NULL,       NULL,                     0,          1,        -1 },
-  { "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
-  { "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
+//  { "Telegram",             NULL,       NULL,                   1 << 1,       0,        -1 },
+//  { "discord",              NULL,       NULL,                   1 << 1,       0,        -1 },
   { "Virt-manager",         NULL,       NULL,                   1 << 6,       0,        -1 },
   { "steam",                NULL,       "Friends List",         1 << 8,       1,        -1 },
   { "steam",                NULL,       "Special Offers",       1 << 8,       1,        -1 },
